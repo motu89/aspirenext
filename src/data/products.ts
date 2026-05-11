@@ -1,0 +1,605 @@
+export interface ProductVariant {
+  size: string;
+  price: number;
+}
+
+export interface ProductColor {
+  name: string;
+  label: string;
+  image?: string;
+}
+
+export interface ProductVideo {
+  src: string;
+  thumbnail: string;
+  poster?: string;
+}
+
+export interface Product {
+  slug: string;
+  name: string;
+  title: string;
+  category: string;
+  categorySlug: string;
+  price: string;
+  originalPrice?: string;
+  mainImage: string;
+  images: string[];
+  videos?: ProductVideo[];
+  variants?: ProductVariant[];
+  colors?: ProductColor[];
+  hasSizeOptions: boolean;
+  hasColorOptions: boolean;
+  hasQuantityOption: boolean;
+  unit?: string;
+  unitPrice?: number;
+  salesText: string;
+  viewersText: string;
+  stockText: string;
+  description?: string;
+  colorImagePattern?: string;
+}
+
+export interface Category {
+  name: string;
+  slug: string;
+}
+
+export const categories: Category[] = [
+  { name: 'WARDROBES', slug: 'wardrobes' },
+  { name: 'SOFAS', slug: 'sofas' },
+  { name: 'LEATHER SOFAS', slug: 'leather-sofas' },
+  { name: 'BEDS', slug: 'beds' },
+  { name: 'WALL PANELS', slug: 'wall-panels' },
+  { name: 'DRESSING TABLES', slug: 'dressing-tables' },
+];
+
+export const products: Product[] = [
+  // ===== WARDROBES =====
+  {
+    slug: 'wardrobe1',
+    name: 'Modern Sliding Wardrobe',
+    title: 'Modern Full Mirror 2&3 Sliding Doors Wardrobe for Bedroom - Chicago',
+    category: 'WARDROBES',
+    categorySlug: 'wardrobes',
+    price: '£240',
+    mainImage: '/images/wardrobes/wardrobe1-main.jpg',
+    images: [
+      '/images/wardrobes/wardrobe1-main.jpg',
+      '/images/wardrobes/wardrobe1-2.jpg',
+      '/images/wardrobes/wardrobe1-3.jpg',
+      '/images/wardrobes/wardrobe1-4.jpg',
+      '/images/wardrobes/wardrobe1-5.jpg',
+    ],
+    variants: [
+      { size: '100cm', price: 240 },
+      { size: '120cm', price: 260 },
+      { size: '150cm', price: 280 },
+      { size: '180cm', price: 300 },
+      { size: '203cm', price: 330 },
+      { size: '250cm', price: 420 },
+    ],
+    colors: [
+      { name: 'white', label: 'White', image: '/images/wardrobes/wardrobe1-white.jpg' },
+      { name: 'black', label: 'Black', image: '/images/wardrobes/wardrobe1-black.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/wardrobes/wardrobe1-grey.jpg' },
+      { name: 'oak', label: 'Oak', image: '/images/wardrobes/wardrobe1-oak.jpg' },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '12 sold in last 15 hours',
+    viewersText: '15 people are viewing this right now',
+    stockText: 'Only 10 left in stock!',
+    colorImagePattern: 'wardrobe1-{color}',
+  },
+  {
+    slug: 'wardrobe2',
+    name: 'Modern Full Mirror Sliding Doors Wardrobe - Vision',
+    title: 'Modern Full Mirror Sliding Doors Wardrobe - Vision',
+    category: 'WARDROBES',
+    categorySlug: 'wardrobes',
+    price: '£280',
+    mainImage: '/images/wardrobes/vision-wardrobe1.jpg',
+    images: [
+      '/images/wardrobes/vision-wardrobe1.jpg',
+      '/images/wardrobes/vision-wardrobe2.jpg',
+      '/images/wardrobes/vision-wardrobe3.jpg',
+      '/images/wardrobes/vision-wardrobe4.jpg',
+    ],
+    variants: [
+      { size: '150cm', price: 280 },
+      { size: '180cm', price: 300 },
+      { size: '203cm', price: 315 },
+      { size: '250cm', price: 330 },
+    ],
+    colors: [
+      { name: 'white', label: 'White', image: '/images/wardrobes/vision-wardrobe-white.jpg' },
+      { name: 'black', label: 'Black', image: '/images/wardrobes/vision-wardrobe-black.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/wardrobes/vision-wardrobe-grey.jpg' },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '10 sold in last 24 hours',
+    viewersText: '12 people are viewing this right now',
+    stockText: 'Only 8 left in stock!',
+    colorImagePattern: 'vision-wardrobe-{color}',
+  },
+  {
+    slug: 'wardrobe3',
+    name: 'Modern Full Mirror Sliding Doors Wardrobe - Oslo',
+    title: 'Modern Full Mirror Sliding Doors Wardrobe - Oslo',
+    category: 'WARDROBES',
+    categorySlug: 'wardrobes',
+    price: '£280',
+    mainImage: '/images/wardrobes/oslo1.jpg',
+    images: [
+      '/images/wardrobes/oslo1.jpg',
+      '/images/wardrobes/oslo2.jpg',
+      '/images/wardrobes/oslo3.jpg',
+      '/images/wardrobes/oslo4.jpg',
+      '/images/wardrobes/oslo5.jpg',
+    ],
+    variants: [
+      { size: '150cm', price: 280 },
+      { size: '180cm', price: 300 },
+      { size: '203cm', price: 315 },
+      { size: '250cm', price: 330 },
+    ],
+    colors: [
+      { name: 'white', label: 'White', image: '/images/wardrobes/oslo-1-white.jpg' },
+      { name: 'black', label: 'Black', image: '/images/wardrobes/oslo-1-black.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/wardrobes/oslo-1-grey.jpg' },
+      { name: 'oak', label: 'Oak', image: '/images/wardrobes/oslo-1-oak.jpg' },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '8 sold in last 24 hours',
+    viewersText: '10 people are viewing this right now',
+    stockText: 'Only 7 left in stock!',
+    colorImagePattern: 'oslo-1-{color}',
+  },
+  {
+    slug: 'wardrobe4',
+    name: 'Modern Full Mirror Sliding Doors Wardrobe - Nichole',
+    title: 'Modern Full Mirror Sliding Doors Wardrobe - Nichole',
+    category: 'WARDROBES',
+    categorySlug: 'wardrobes',
+    price: '£280',
+    mainImage: '/images/wardrobes/nichole1.jpg',
+    images: [
+      '/images/wardrobes/nichole1.jpg',
+      '/images/wardrobes/nichole2.jpg',
+      '/images/wardrobes/nichole3.jpg',
+      '/images/wardrobes/nichole4.jpg',
+    ],
+    variants: [
+      { size: '150cm', price: 280 },
+      { size: '180cm', price: 300 },
+      { size: '203cm', price: 315 },
+      { size: '250cm', price: 330 },
+    ],
+    colors: [
+      { name: 'white', label: 'White', image: '/images/wardrobes/nichole-white.jpg' },
+      { name: 'black', label: 'Black', image: '/images/wardrobes/nichole-black.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/wardrobes/nichole-grey.jpg' },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '6 sold in last 24 hours',
+    viewersText: '8 people are viewing this right now',
+    stockText: 'Only 6 left in stock!',
+    colorImagePattern: 'nichole-{color}',
+  },
+  {
+    slug: 'wardrobe5',
+    name: 'Spacious Bedroom Sliding Wardrobe 256cm',
+    title: 'Spacious Bedroom Sliding Wardrobe - Sleek and Functional Design in 256cm',
+    category: 'WARDROBES',
+    categorySlug: 'wardrobes',
+    price: '£520',
+    mainImage: '/images/wardrobes/ws1.jpg',
+    images: [
+      '/images/wardrobes/ws1.jpg',
+      '/images/wardrobes/ws2.jpg',
+      '/images/wardrobes/ws3.jpg',
+    ],
+    variants: [
+      { size: '256cm', price: 520 },
+    ],
+    colors: [
+      { name: 'white', label: 'White', image: '/images/wardrobes/ws2.jpg' },
+      { name: 'black', label: 'Black', image: '/images/wardrobes/ws1.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/wardrobes/ws3.jpg' },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '4 sold in last 48 hours',
+    viewersText: '6 people are viewing this right now',
+    stockText: 'Only 3 left in stock!',
+  },
+  // ===== SOFAS =====
+  {
+    slug: 'sofa1',
+    name: '3+2 Corner Sofa',
+    title: '3+2 Corner Sofa',
+    category: 'SOFAS',
+    categorySlug: 'sofas',
+    price: '£480',
+    mainImage: '/images/sofas/vsofa1.jpg',
+    images: [
+      '/images/sofas/vsofa1.jpg',
+      '/images/sofas/vsofa2.jpg',
+      '/images/sofas/vsofa3.jpg',
+      '/images/sofas/vsofa4.jpg',
+      '/images/sofas/vsofa5.jpg',
+      '/images/sofas/vsofa6.jpg',
+      '/images/sofas/vsofa7.jpg',
+      '/images/sofas/vsofa8.jpg',
+      '/images/sofas/vsofa9.jpg',
+      '/images/sofas/vsofa10.jpg',
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '8 sold in last 24 hours',
+    viewersText: '15 people are viewing this right now',
+    stockText: 'Only 5 left in stock!',
+  },
+  {
+    slug: 'sofa2',
+    name: 'Ushape Sofa',
+    title: 'U-Shape Sofa',
+    category: 'SOFAS',
+    categorySlug: 'sofas',
+    price: '£550',
+    mainImage: '/images/sofas/usofa1.jpg',
+    images: [
+      '/images/sofas/usofa1.jpg',
+      '/images/sofas/usofa2.jpg',
+      '/images/sofas/usofa3.jpg',
+      '/images/sofas/usofa4.jpg',
+      '/images/sofas/usofa5.jpg',
+      '/images/sofas/usofa6.jpg',
+      '/images/sofas/usofa7.jpg',
+      '/images/sofas/usofa8.jpg',
+      '/images/sofas/usofa9.jpg',
+      '/images/sofas/usofa10.jpg',
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '6 sold in last 24 hours',
+    viewersText: '12 people are viewing this right now',
+    stockText: 'Only 4 left in stock!',
+  },
+  {
+    slug: 'sofa3',
+    name: 'Dylan Corner Sofa',
+    title: 'Dylan Corner Sofa',
+    category: 'SOFAS',
+    categorySlug: 'sofas',
+    price: '£340',
+    mainImage: '/images/sofas/dylan1.jpg',
+    images: [
+      '/images/sofas/dylan1.jpg',
+      '/images/sofas/dylan2.jpg',
+      '/images/sofas/dylan3.jpg',
+      '/images/sofas/dylan4.jpg',
+      '/images/sofas/dylan5.jpg',
+      '/images/sofas/dylan6.jpg',
+      '/images/sofas/dylan7.jpg',
+      '/images/sofas/dylan8.jpg',
+      '/images/sofas/dylan9.jpg',
+      '/images/sofas/dylan10.jpg',
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '10 sold in last 24 hours',
+    viewersText: '18 people are viewing this right now',
+    stockText: 'Only 6 left in stock!',
+  },
+  {
+    slug: 'sofa4',
+    name: 'Ashton Sofa 3+2',
+    title: 'Ashton Sofa 3+2',
+    category: 'SOFAS',
+    categorySlug: 'sofas',
+    price: '£500',
+    mainImage: '/images/sofas/ashton2.jpeg',
+    images: [
+      '/images/sofas/ashton1.jpeg',
+      '/images/sofas/ashton2.jpeg',
+      '/images/sofas/ashton3.jpeg',
+      '/images/sofas/ashton4.jpeg',
+      '/images/sofas/ashton5.jpeg',
+      '/images/sofas/ashton6.jpeg',
+      '/images/sofas/ashton7.jpeg',
+      '/images/sofas/ashton8.jpeg',
+      '/images/sofas/ashton9.jpeg',
+      '/images/sofas/ashton10.jpeg',
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '7 sold in last 24 hours',
+    viewersText: '14 people are viewing this right now',
+    stockText: 'Only 5 left in stock!',
+  },
+  // ===== LEATHER SOFAS =====
+  {
+    slug: 'leather-corner-sofa',
+    name: 'Leather Corner Sofa',
+    title: 'Leather Corner Sofa',
+    category: 'LEATHER SOFAS',
+    categorySlug: 'leather-sofas',
+    price: '£699',
+    originalPrice: '£899',
+    mainImage: '/images/Leather Sofa/c/bc1.jpg',
+    images: [
+      '/images/Leather Sofa/c/bc1.jpg',
+      '/images/Leather Sofa/c/bb3.jpg',
+      '/images/Leather Sofa/c/bg2.jpg',
+      '/images/Leather Sofa/c/bg4.jpg',
+      '/images/Leather Sofa/c/size.jpg',
+    ],
+    colors: [
+      { name: 'black', label: 'Black', image: '/images/Leather Sofa/c/bc1.jpg' },
+      { name: 'brown', label: 'Brown', image: '/images/Leather Sofa/c/bb3.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/Leather Sofa/c/bg2.jpg' },
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '5 sold in last 48 hours',
+    viewersText: '10 people are viewing this right now',
+    stockText: 'Only 4 left in stock!',
+  },
+  {
+    slug: 'leather-32-sofa',
+    name: 'Leather 3+2 Sofa',
+    title: 'Leather 3+2 Sofa',
+    category: 'LEATHER SOFAS',
+    categorySlug: 'leather-sofas',
+    price: '£550',
+    originalPrice: '£600',
+    mainImage: '/images/Leather Sofa/3%2B2/lb1.jpg',
+    images: [
+      '/images/Leather Sofa/3%2B2/lb1.jpg',
+      '/images/Leather Sofa/3%2B2/lg2.jpg',
+      '/images/Leather Sofa/3%2B2/lh3.jpg',
+      '/images/Leather Sofa/3%2B2/ls4.jpg',
+      '/images/Leather Sofa/3%2B2/size.jpg',
+    ],
+    colors: [
+      { name: 'black', label: 'Black', image: '/images/Leather Sofa/3%2B2/lb1.jpg' },
+      { name: 'brown', label: 'Brown', image: '/images/Leather Sofa/3%2B2/lh3.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/Leather Sofa/3%2B2/lg2.jpg' },
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '4 sold in last 48 hours',
+    viewersText: '8 people are viewing this right now',
+    stockText: 'Only 3 left in stock!',
+  },
+  // ===== BEDS =====
+  {
+    slug: 'bed1',
+    name: "Florida Bed's With Mattress",
+    title: "Florida Beds With Mattress",
+    category: 'BEDS',
+    categorySlug: 'beds',
+    price: '£180',
+    mainImage: '/images/beds/fbed1.jpg',
+    images: [
+      '/images/beds/fbed1.jpg',
+      '/images/beds/fbed2.jpg',
+      '/images/beds/fbed3.jpg',
+      '/images/beds/fbed4.jpg',
+      '/images/beds/fbed5.jpg',
+      '/images/beds/fbed6.jpg',
+    ],
+    variants: [
+      { size: 'Single (3ft)', price: 180 },
+      { size: 'Double (4ft6)', price: 200 },
+      { size: 'King (5ft)', price: 220 },
+      { size: 'Super King (6ft)', price: 240 },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '15 sold in last 24 hours',
+    viewersText: '20 people are viewing this right now',
+    stockText: 'Only 8 left in stock!',
+  },
+  {
+    slug: 'bed2',
+    name: 'Panel Wing Beds With Mattress',
+    title: 'Panel Wing Beds With Mattress',
+    category: 'BEDS',
+    categorySlug: 'beds',
+    price: '£180',
+    mainImage: '/images/beds/hbed1.jpg',
+    images: [
+      '/images/beds/hbed1.jpg',
+      '/images/beds/hbed2.jpg',
+      '/images/beds/hbed3.jpg',
+      '/images/beds/hbed4.jpg',
+      '/images/beds/hbed5.jpg',
+      '/images/beds/hbed6.jpg',
+    ],
+    variants: [
+      { size: 'Single (3ft)', price: 180 },
+      { size: 'Double (4ft6)', price: 200 },
+      { size: 'King (5ft)', price: 220 },
+      { size: 'Super King (6ft)', price: 240 },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '12 sold in last 24 hours',
+    viewersText: '18 people are viewing this right now',
+    stockText: 'Only 7 left in stock!',
+  },
+  {
+    slug: 'bed3',
+    name: 'Hilton Beds With Mattress',
+    title: 'Plush Velvet Bed Frame',
+    category: 'BEDS',
+    categorySlug: 'beds',
+    price: '£180',
+    mainImage: '/images/beds/lbed1.jpg',
+    images: [
+      '/images/beds/lbed1.jpg',
+      '/images/beds/lbed2.jpg',
+      '/images/beds/lbed3.jpg',
+      '/images/beds/lbed4.jpg',
+      '/images/beds/lbed5.jpg',
+      '/images/beds/lbed6.jpg',
+    ],
+    variants: [
+      { size: 'Single (3ft)', price: 180 },
+      { size: 'Double (4ft6)', price: 200 },
+      { size: 'King (5ft)', price: 220 },
+      { size: 'Super King (6ft)', price: 240 },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '9 sold in last 24 hours',
+    viewersText: '15 people are viewing this right now',
+    stockText: 'Only 6 left in stock!',
+  },
+  {
+    slug: 'bed4',
+    name: 'Divan Ottoman Storage Beds',
+    title: 'Divan Ottoman Storage Beds',
+    category: 'BEDS',
+    categorySlug: 'beds',
+    price: '£380',
+    mainImage: '/images/beds/dbed1.jpg',
+    images: [
+      '/images/beds/dbed1.jpg',
+      '/images/beds/dbed2.jpg',
+      '/images/beds/dbed3.jpg',
+      '/images/beds/dbed4.jpg',
+      '/images/beds/dbed5.jpg',
+    ],
+    variants: [
+      { size: 'Double (4ft6)', price: 380 },
+      { size: 'King (5ft)', price: 400 },
+      { size: 'Super King (6ft)', price: 430 },
+    ],
+    hasSizeOptions: true,
+    hasColorOptions: false,
+    hasQuantityOption: false,
+    salesText: '5 sold in last 48 hours',
+    viewersText: '10 people are viewing this right now',
+    stockText: 'Only 4 left in stock!',
+  },
+  // ===== WALL PANELS =====
+  {
+    slug: 'panel1',
+    name: 'Plastic Wooden Effect PVC Wall Panels',
+    title: 'Plastic Wooden Effect PVC Wall Panels',
+    category: 'WALL PANELS',
+    categorySlug: 'wall-panels',
+    price: '£170',
+    mainImage: '/images/wall-panels/pvc1.jpg',
+    images: [
+      '/images/wall-panels/pvc1.jpg',
+      '/images/wall-panels/pvc2.jpg',
+      '/images/wall-panels/pvc3.jpg',
+      '/images/wall-panels/pvc4.jpg',
+      '/images/wall-panels/pvc5.jpg',
+      '/images/wall-panels/pvc6.jpg',
+      '/images/wall-panels/pvc7.jpg',
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: false,
+    hasQuantityOption: true,
+    unit: 'per pack (8 panels)',
+    unitPrice: 170,
+    salesText: '20 sold in last 24 hours',
+    viewersText: '25 people are viewing this right now',
+    stockText: 'In stock - Order now!',
+  },
+  {
+    slug: 'panel2',
+    name: 'Acoustic Wooden Panels',
+    title: 'Acoustic Wooden Panels',
+    category: 'WALL PANELS',
+    categorySlug: 'wall-panels',
+    price: '£60',
+    mainImage: '/images/wall-panels/wooden4.webp',
+    images: [
+      '/images/wall-panels/wooden4.webp',
+      '/images/wall-panels/wooden1.webp',
+      '/images/wall-panels/wooden2.jpg',
+      '/images/wall-panels/wooden3.jpg',
+      '/images/wall-panels/wooden5.jpg',
+      '/images/wall-panels/wooden6.jpg',
+      '/images/wall-panels/wooden7.jpg',
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: false,
+    hasQuantityOption: true,
+    unit: 'per pack (6 panels)',
+    unitPrice: 60,
+    salesText: '15 sold in last 24 hours',
+    viewersText: '20 people are viewing this right now',
+    stockText: 'In stock - Order now!',
+  },
+  // ===== DRESSING TABLES =====
+  {
+    slug: 'dressingtable1',
+    name: 'Dressing Table with LED Lights and Music Player',
+    title: 'Dressing Table with LED Lights and Music Player',
+    category: 'DRESSING TABLES',
+    categorySlug: 'dressing-tables',
+    price: '£340',
+    originalPrice: '£380',
+    mainImage: '/images/dressing-tables/dressing-table-white.jpg',
+    images: [
+      '/images/dressing-tables/dressing-table-white.jpg',
+      '/images/dressing-tables/dressing-table-pink.jpg',
+      '/images/dressing-tables/dressing-table-dark-grey.jpg',
+      '/images/dressing-tables/dressing-table-grey.jpg',
+      '/images/dressing-tables/dressing-table-light-grey.jpg',
+      '/images/dressing-tables/dressing-table-off-white.jpg',
+    ],
+    colors: [
+      { name: 'white', label: 'White', image: '/images/dressing-tables/dressing-table-white.jpg' },
+      { name: 'light-grey', label: 'Light Grey', image: '/images/dressing-tables/dressing-table-light-grey.jpg' },
+      { name: 'grey', label: 'Grey', image: '/images/dressing-tables/dressing-table-grey.jpg' },
+      { name: 'dark-grey', label: 'Dark Grey', image: '/images/dressing-tables/dressing-table-dark-grey.jpg' },
+      { name: 'off-white', label: 'Off White', image: '/images/dressing-tables/dressing-table-off-white.jpg' },
+      { name: 'pink', label: 'Pink', image: '/images/dressing-tables/dressing-table-pink.jpg' },
+    ],
+    hasSizeOptions: false,
+    hasColorOptions: true,
+    hasQuantityOption: false,
+    salesText: '10 sold in last 24 hours',
+    viewersText: '16 people are viewing this right now',
+    stockText: 'Only 5 left in stock!',
+    videos: [
+      { src: '/images/dressing-tables/dtv1.mp4', thumbnail: '/images/dressing-tables/video-thumbnail-1.jpg' },
+      { src: '/images/dressing-tables/dtv2.mp4', thumbnail: '/images/dressing-tables/video-thumbnail-2.jpg' },
+      { src: '/images/dressing-tables/dtv3.mp4', thumbnail: '/images/dressing-tables/video-thumbnail-3.jpg' },
+    ],
+  },
+];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(categorySlug: string): Product[] {
+  return products.filter((p) => p.categorySlug === categorySlug);
+}
