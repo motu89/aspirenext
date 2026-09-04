@@ -4,7 +4,7 @@ export default function WhatsAppFloat() {
   return (
     <a
       data-whatsapp-float
-      href="https://wa.me/447494821146"
+      href="https://wa.me/447897060826"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform"
