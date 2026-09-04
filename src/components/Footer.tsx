@@ -19,19 +19,19 @@ export default function Footer() {
               </li>
               <li className="flex items-center justify-center sm:justify-start gap-2">
                 <i className="fa fa-phone" style={{ color: '#d4a056' }} />
-                <a href="tel:+447494821146" className="hover:text-white transition-colors">
-                  +44 7494 821146
+                <a href="tel:+447897060826" className="hover:text-white transition-colors">
+                  +447897060826
                 </a>
               </li>
               <li className="flex items-center justify-center sm:justify-start gap-2">
                 <i className="fa fa-whatsapp" style={{ color: '#25D366' }} />
                 <a
-                  href="https://wa.me/447494821146"
+                  href="https://wa.me/447897060826"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  WhatsApp: +44 7494 821146
+                  WhatsApp: +447897060826
                 </a>
               </li>
               <li className="flex items-center justify-center sm:justify-start gap-2">
