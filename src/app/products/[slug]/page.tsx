@@ -426,7 +426,7 @@ export default function ProductPage() {
                 We&apos;ll contact you on WhatsApp to confirm your order.
               </p>
               <a
-                href={`https://wa.me/447494821146?text=${encodeURIComponent(
+                href={`https://wa.me/447897060826?text=${encodeURIComponent(
                   `Hi, I just placed order ${orderResult.orderId} for ${product.name}`
                 )}`}
                 target="_blank"
@@ -518,7 +518,7 @@ export default function ProductPage() {
               Prefer to order via WhatsApp?
             </p>
             <a
-              href={`https://wa.me/447494821146?text=${whatsappMessage}`}
+              href={`https://wa.me/447897060826?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm"
