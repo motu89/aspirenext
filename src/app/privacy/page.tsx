@@ -91,8 +91,8 @@ export default function PrivacyPage() {
                 info@aspirefurnitureuk.com
               </a>{' '}
               or WhatsApp us at{' '}
-              <a href="https://wa.me/447494821146" className="underline" style={{ color: '#8b5a2b' }}>
-                +44 7494 821146
+              <a href="https://wa.me/447897060826" className="underline" style={{ color: '#8b5a2b' }}>
+                +44 7897 060826
               </a>.
             </p>
           </section>
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
             <div className="mt-3 p-4 rounded-lg" style={{ backgroundColor: '#f5f1e9' }}>
               <p><strong>Aspire Furniture UK</strong></p>
               <p>Email: <a href="mailto:info@aspirefurnitureuk.com" className="underline" style={{ color: '#8b5a2b' }}>info@aspirefurnitureuk.com</a></p>
-              <p>Phone/WhatsApp: <a href="tel:+447494821146" className="underline" style={{ color: '#8b5a2b' }}>+44 7494 821146</a></p>
+              <p>Phone/WhatsApp: <a href="tel:+447897060826" className="underline" style={{ color: '#8b5a2b' }}>+44 7494 821146</a></p>
               <p>Address: United Kingdom</p>
             </div>
           </section>
