@@ -63,8 +63,8 @@ export default function ReturnPage() {
             <ol className="list-decimal pl-6 space-y-2 mt-2">
               <li>
                 <strong>Contact Us:</strong> Send us a message on WhatsApp at{' '}
-                <a href="https://wa.me/447494821146" className="underline" style={{ color: '#8b5a2b' }}>
-                  +44 7494 821146
+                <a href="https://wa.me/447897060826" className="underline" style={{ color: '#8b5a2b' }}>
+                  +44 7897 060826
                 </a>{' '}
                 or call us. Include your order ID and photos/videos of the issue.
               </li>
@@ -126,8 +126,8 @@ export default function ReturnPage() {
             <p>If you have any questions about our return policy or need to initiate a return, please contact us:</p>
             <div className="mt-3 p-4 rounded-lg" style={{ backgroundColor: '#f5f1e9' }}>
               <p><strong>Aspire Furniture UK</strong></p>
-              <p>WhatsApp: <a href="https://wa.me/447494821146" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8b5a2b' }}>+44 7494 821146</a></p>
-              <p>Phone: <a href="tel:+447494821146" className="underline" style={{ color: '#8b5a2b' }}>+44 7494 821146</a></p>
+              <p>WhatsApp: <a href="https://wa.me/447897060826" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#8b5a2b' }}>+44 7494 821146</a></p>
+              <p>Phone: <a href="tel:+447897060826" className="underline" style={{ color: '#8b5a2b' }}>+44 7494 821146</a></p>
               <p>Email: <a href="mailto:info@aspirefurnitureuk.com" className="underline" style={{ color: '#8b5a2b' }}>info@aspirefurnitureuk.com</a></p>
             </div>
           </section>
